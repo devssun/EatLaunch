@@ -13,7 +13,18 @@
 		BA1683A31F7A282B007473CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1683A11F7A282B007473CD /* Main.storyboard */; };
 		BA1683A51F7A282B007473CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1683A41F7A282B007473CD /* Assets.xcassets */; };
 		BA1683A81F7A282B007473CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1683A61F7A282B007473CD /* LaunchScreen.storyboard */; };
+		BA4CB1C91F7B858A0083919D /* EatLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CB1C81F7B858A0083919D /* EatLaunchTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA4CB1CB1F7B858A0083919D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA1683921F7A282B007473CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA1683991F7A282B007473CD;
+			remoteInfo = EatLaunch;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		17AB24BAF3438C390E274EFA /* Pods-EatLaunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatLaunch.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatLaunch/Pods-EatLaunch.release.xcconfig"; sourceTree = "<group>"; };
@@ -26,6 +37,11 @@
 		BA1683A41F7A282B007473CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA1683A71F7A282B007473CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA1683A91F7A282B007473CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4CB1BF1F7B80270083919D /* topImageEng.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = topImageEng.jpg; sourceTree = "<group>"; };
+		BA4CB1C01F7B80270083919D /* topImageKor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = topImageKor.jpg; sourceTree = "<group>"; };
+		BA4CB1C61F7B858A0083919D /* EatLaunchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EatLaunchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4CB1C81F7B858A0083919D /* EatLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatLaunchTests.swift; sourceTree = "<group>"; };
+		BA4CB1CA1F7B858A0083919D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +50,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD35EE221E6F0F28A533F87A /* Pods_EatLaunch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4CB1C31F7B858A0083919D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				BA16839C1F7A282B007473CD /* EatLaunch */,
+				BA4CB1C71F7B858A0083919D /* EatLaunchTests */,
 				BA16839B1F7A282B007473CD /* Products */,
 				07B8C4D0CD4D6375B56C5454 /* Pods */,
 				9DC1E9BBD1C91C6CCFA92DB3 /* Frameworks */,
@@ -71,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				BA16839A1F7A282B007473CD /* EatLaunch.app */,
+				BA4CB1C61F7B858A0083919D /* EatLaunchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +103,7 @@
 		BA16839C1F7A282B007473CD /* EatLaunch */ = {
 			isa = PBXGroup;
 			children = (
+				BA4CB1C11F7B802B0083919D /* resources */,
 				BA16839D1F7A282B007473CD /* AppDelegate.swift */,
 				BA16839F1F7A282B007473CD /* ViewController.swift */,
 				BA1683A11F7A282B007473CD /* Main.storyboard */,
@@ -86,6 +112,24 @@
 				BA1683A91F7A282B007473CD /* Info.plist */,
 			);
 			path = EatLaunch;
+			sourceTree = "<group>";
+		};
+		BA4CB1C11F7B802B0083919D /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA4CB1BF1F7B80270083919D /* topImageEng.jpg */,
+				BA4CB1C01F7B80270083919D /* topImageKor.jpg */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		BA4CB1C71F7B858A0083919D /* EatLaunchTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA4CB1C81F7B858A0083919D /* EatLaunchTests.swift */,
+				BA4CB1CA1F7B858A0083919D /* Info.plist */,
+			);
+			path = EatLaunchTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,6 +155,24 @@
 			productReference = BA16839A1F7A282B007473CD /* EatLaunch.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BA4CB1C51F7B858A0083919D /* EatLaunchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA4CB1CD1F7B858A0083919D /* Build configuration list for PBXNativeTarget "EatLaunchTests" */;
+			buildPhases = (
+				BA4CB1C21F7B858A0083919D /* Sources */,
+				BA4CB1C31F7B858A0083919D /* Frameworks */,
+				BA4CB1C41F7B858A0083919D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA4CB1CC1F7B858A0083919D /* PBXTargetDependency */,
+			);
+			name = EatLaunchTests;
+			productName = EatLaunchTests;
+			productReference = BA4CB1C61F7B858A0083919D /* EatLaunchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -124,6 +186,11 @@
 					BA1683991F7A282B007473CD = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+					};
+					BA4CB1C51F7B858A0083919D = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BA1683991F7A282B007473CD;
 					};
 				};
 			};
@@ -141,6 +208,7 @@
 			projectRoot = "";
 			targets = (
 				BA1683991F7A282B007473CD /* EatLaunch */,
+				BA4CB1C51F7B858A0083919D /* EatLaunchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -153,6 +221,13 @@
 				BA1683A81F7A282B007473CD /* LaunchScreen.storyboard in Resources */,
 				BA1683A51F7A282B007473CD /* Assets.xcassets in Resources */,
 				BA1683A31F7A282B007473CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4CB1C41F7B858A0083919D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +297,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BA4CB1C21F7B858A0083919D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA4CB1C91F7B858A0083919D /* EatLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA4CB1CC1F7B858A0083919D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA1683991F7A282B007473CD /* EatLaunch */;
+			targetProxy = BA4CB1CB1F7B858A0083919D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BA1683A11F7A282B007473CD /* Main.storyboard */ = {
@@ -381,6 +472,36 @@
 			};
 			name = Release;
 		};
+		BA4CB1CE1F7B858A0083919D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EatLaunchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.EatLaunchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EatLaunch.app/EatLaunch";
+			};
+			name = Debug;
+		};
+		BA4CB1CF1F7B858A0083919D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EatLaunchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.EatLaunchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EatLaunch.app/EatLaunch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -398,6 +519,15 @@
 			buildConfigurations = (
 				BA1683AD1F7A282B007473CD /* Debug */,
 				BA1683AE1F7A282B007473CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA4CB1CD1F7B858A0083919D /* Build configuration list for PBXNativeTarget "EatLaunchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4CB1CE1F7B858A0083919D /* Debug */,
+				BA4CB1CF1F7B858A0083919D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
