@@ -44,10 +44,10 @@ class ViewController: UIViewController {
         activityIndicatorView.startAnimating()
         
         // 날짜 가져와서 파라미터로 넘기기
-        let search = searchDate.split(separator: "-")
+        let search = searchDate.components(separatedBy: "-")
         
         // 오늘의 점심 가져오기
-        getTodayMealInfo(searchYear: 2017, searchMonth: 9, searchDay: 19) { (result) in
+        getTodayMealInfo(searchYear: search[0], searchMonth: search[1], searchDay: search[2]) { (result) in
             self.activityIndicatorView.stopAnimating()
             print("result : \(result!)")
             self.launchTextView.text = result
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
     }
     
     // 오늘의 점심 정보 가져오기
-    func getTodayMealInfo(searchYear: Int, searchMonth: Int, searchDay: Int, completionHandler: @escaping (String?) -> Void){
+    func getTodayMealInfo(searchYear: String, searchMonth: String, searchDay: String, completionHandler: @escaping (String?) -> Void){
         
         var str = [String]()
         
