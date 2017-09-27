@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     var str = [String]()
     @IBOutlet weak var launchTextView: UITextView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
