@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         // 오늘의 점심 가져오기
         getTodayMealInfo(searchYear: search[0], searchMonth: search[1], searchDay: search[2]) { (result) in
             self.activityIndicatorView.stopAnimating()
-            print("result : \(result!)")
             self.launchTextView.text = result
         }
     }
@@ -65,7 +64,21 @@ class ViewController: UIViewController {
         datePicker.isHidden = true
         
         activityIndicatorView.hidesWhenStopped = true
+        
+        
+        let date = Date()
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "YYYY-MM-dd"
+        let result = dateformatter.string(from: date)
+        openDatePickerButton.setTitle(result, for: UIControlState())
+        let search = result.components(separatedBy: "-")
+        
+        // 앱 실행 시 오늘 날짜 급식 정보 가져오기
+        getTodayMealInfo(searchYear: search[0], searchMonth: search[1], searchDay: search[2]) { (result) in
+            self.launchTextView.text = result
+        }
     }
+    
     
     // 오늘의 점심 정보 가져오기
     func getTodayMealInfo(searchYear: String, searchMonth: String, searchDay: String, completionHandler: @escaping (String?) -> Void){
