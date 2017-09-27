@@ -1,0 +1,6 @@
+framework module Pods_EatLaunch {
+  umbrella header "Pods-EatLaunch-umbrella.h"
+
+  export *
+  module * { export * }
+}
