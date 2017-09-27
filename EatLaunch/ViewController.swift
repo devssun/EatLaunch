@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         activityIndicatorView.hidesWhenStopped = true
         
         
+        // 함수로 만들기
         let date = Date()
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "YYYY-MM-dd"

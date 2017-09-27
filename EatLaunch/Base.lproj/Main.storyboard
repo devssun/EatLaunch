@@ -42,7 +42,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="a6M-RI-OCS">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="a6M-RI-OCS">
                                 <rect key="frame" x="0.0" y="520" width="414" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="528170597.82719898">
                                     <!--2017-09-27 02:03:17 +0000-->
@@ -62,19 +62,19 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LSO-tF-huw" secondAttribute="trailing" constant="35" id="0WI-z0-mg7"/>
-                            <constraint firstItem="LSO-tF-huw" firstAttribute="top" secondItem="G8b-BV-gzE" secondAttribute="bottom" constant="50" id="Bie-uA-1Zb"/>
+                            <constraint firstItem="LSO-tF-huw" firstAttribute="top" secondItem="G8b-BV-gzE" secondAttribute="bottom" priority="999" constant="50" id="Bie-uA-1Zb"/>
                             <constraint firstItem="raI-KS-SVw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="NxE-QO-eKi"/>
                             <constraint firstItem="a6M-RI-OCS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="P4f-2c-pY2"/>
                             <constraint firstItem="a6M-RI-OCS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PtK-QS-i9E"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="raI-KS-SVw" secondAttribute="trailing" constant="35" id="apH-Dw-oRW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G8b-BV-gzE" secondAttribute="trailing" constant="35" id="bGn-2n-bJi"/>
-                            <constraint firstItem="G8b-BV-gzE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="d0U-9l-i4t"/>
+                            <constraint firstItem="G8b-BV-gzE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="999" constant="25" id="d0U-9l-i4t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a6M-RI-OCS" secondAttribute="bottom" id="gbc-I0-Wtr"/>
                             <constraint firstItem="jdu-dd-XNb" firstAttribute="centerX" secondItem="raI-KS-SVw" secondAttribute="centerX" id="nL7-Z9-hX8"/>
                             <constraint firstItem="LSO-tF-huw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="poC-qt-xQh"/>
                             <constraint firstItem="jdu-dd-XNb" firstAttribute="centerY" secondItem="raI-KS-SVw" secondAttribute="centerY" id="q7T-2Q-heW"/>
                             <constraint firstItem="G8b-BV-gzE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="tce-z5-rFM"/>
-                            <constraint firstItem="raI-KS-SVw" firstAttribute="top" secondItem="LSO-tF-huw" secondAttribute="bottom" constant="50" id="zcN-AG-30Y"/>
+                            <constraint firstItem="raI-KS-SVw" firstAttribute="top" secondItem="LSO-tF-huw" secondAttribute="bottom" priority="999" constant="50" id="zcN-AG-30Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
