@@ -44,9 +44,18 @@ class ViewController: UIViewController {
         }
     }
     
+    func initTitleImage() {
+        print("gigi")
+        let image = UIImage(named: "topImageKor")
+        let imageV = UIImageView(image: image)
+        
+        self.navigationItem.titleView = imageV
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        initTitleImage()
         
         // textview setting
         launchTextView.layer.borderColor = UIColor.black.cgColor
@@ -94,7 +103,6 @@ class ViewController: UIViewController {
         if let url = URL(string: SEARCH_URL){
             do{
                 let contents = try NSString(contentsOf: url, usedEncoding: nil)
-                //                print(contents)   // 전체 HTML 소스
                 
                 let doc = try HTMLDocument(string: contents as String, encoding: String.Encoding.utf8)
                 
