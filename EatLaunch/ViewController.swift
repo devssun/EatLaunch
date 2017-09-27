@@ -11,9 +11,49 @@ import Fuzi
 
 class ViewController: UIViewController {
     
-    var str = [String]()
     @IBOutlet weak var launchTextView: UITextView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet weak var openDatePickerButton: UIButton!
+    @IBOutlet weak var dateStackView: UIStackView!
+    
+    var searchDate: String = ""
+    
+    // datepicker 날짜 변경에 따라 '날짜 선택' 버튼 텍스트 변경
+    @IBAction func changeDatePicker(_ sender: Any) {
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "YYYY-MM-dd"
+        let date = dateformatter.string(from: (sender as! UIDatePicker).date)
+        searchDate = date
+        openDatePickerButton.setTitle(date, for: UIControlState())
+    }
+    
+    // 날짜 선택 버튼 액션
+    @IBAction func openDatePickerButton(_ sender: Any) {
+        if dateStackView.isHidden == true{
+            dateStackView.isHidden = false
+        }else{
+            dateStackView.isHidden = true
+        }
+    }
+    
+    // 날짜 조회 버튼
+    @IBAction func searchButton(_ sender: Any) {
+        activityIndicatorView.startAnimating()
+        
+        // 날짜 가져와서 파라미터로 넘기기
+        let search = searchDate.split(separator: "-")
+        
+        // 오늘의 점심 가져오기
+        getTodayMealInfo(searchYear: 2017, searchMonth: 9, searchDay: 19) { (result) in
+            self.activityIndicatorView.stopAnimating()
+            print("result : \(result!)")
+            self.launchTextView.text = result
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,16 +65,28 @@ class ViewController: UIViewController {
         launchTextView.isEditable = false
         launchTextView.clipsToBounds = true
         
-        // 오늘의 점심 가져오기
-        getTodayMealInfo(searchYear: 2017, searchMonth: 09, searchDay: 18) { (result) in
-            print("result : \(result!)")
-            self.launchTextView.text = result
-        }
+        // datepicker, searchbutton 스택 뷰 숨김처리
+        dateStackView.isHidden = true
+        
+        openDatePickerButton.layer.borderColor = UIColor.gray.cgColor
+        openDatePickerButton.layer.borderWidth = 1.0
+        openDatePickerButton.layer.cornerRadius = 2.0
+        openDatePickerButton.clipsToBounds = true
+        
+        activityIndicatorView.hidesWhenStopped = true
     }
     
     // 오늘의 점심 정보 가져오기
     func getTodayMealInfo(searchYear: Int, searchMonth: Int, searchDay: Int, completionHandler: @escaping (String?) -> Void){
-        if let url = URL(string: "http://www.samil.hs.kr/main.php?menugrp=060603&master=meal2&act=list&SearchYear=2017&SearchMonth=09&SearchDay=18#diary_list"){
+        
+        var str = [String]()
+        
+        // http://www.samil.hs.kr/main.php?menugrp=060603&master=meal2&act=list&SearchYear=2017&SearchMonth=09&SearchDay=18#diary_list
+        let BASE_URL = "http://www.samil.hs.kr/main.php?menugrp=060603&master=meal2&act=list"
+        
+        let SEARCH_URL = "\(BASE_URL)&SearchYear=\(searchYear)&SearchMonth=\(searchMonth)&SearchDay=\(searchDay)#diary_list"
+        
+        if let url = URL(string: SEARCH_URL){
             do{
                 let contents = try NSString(contentsOf: url, usedEncoding: nil)
                 //                print(contents)   // 전체 HTML 소스
@@ -61,7 +113,7 @@ class ViewController: UIViewController {
             // the URL was bad!
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
