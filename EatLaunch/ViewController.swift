@@ -13,11 +13,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var launchTextView: UITextView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
     @IBOutlet weak var openDatePickerButton: UIButton!
-    @IBOutlet weak var dateStackView: UIStackView!
     
     var searchDate: String = ""
     
@@ -26,25 +23,10 @@ class ViewController: UIViewController {
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "YYYY-MM-dd"
         let date = dateformatter.string(from: (sender as! UIDatePicker).date)
-        searchDate = date
         openDatePickerButton.setTitle(date, for: UIControlState())
-    }
-    
-    // 날짜 선택 버튼 액션
-    @IBAction func openDatePickerButton(_ sender: Any) {
-        if dateStackView.isHidden == true{
-            dateStackView.isHidden = false
-        }else{
-            dateStackView.isHidden = true
-        }
-    }
-    
-    // 날짜 조회 버튼
-    @IBAction func searchButton(_ sender: Any) {
-        activityIndicatorView.startAnimating()
         
         // 날짜 가져와서 파라미터로 넘기기
-        let search = searchDate.components(separatedBy: "-")
+        let search = date.components(separatedBy: "-")
         
         // 오늘의 점심 가져오기
         getTodayMealInfo(searchYear: search[0], searchMonth: search[1], searchDay: search[2]) { (result) in
@@ -54,6 +36,14 @@ class ViewController: UIViewController {
         }
     }
     
+    // 날짜 선택 버튼 액션
+    @IBAction func openDatePickerButton(_ sender: Any) {
+        if datePicker.isHidden == true{
+            datePicker.isHidden = false
+        }else{
+            datePicker.isHidden = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,13 +55,14 @@ class ViewController: UIViewController {
         launchTextView.isEditable = false
         launchTextView.clipsToBounds = true
         
-        // datepicker, searchbutton 스택 뷰 숨김처리
-        dateStackView.isHidden = true
-        
+        // 날짜 선택 버튼
         openDatePickerButton.layer.borderColor = UIColor.gray.cgColor
         openDatePickerButton.layer.borderWidth = 1.0
         openDatePickerButton.layer.cornerRadius = 2.0
         openDatePickerButton.clipsToBounds = true
+        
+        // date picker
+        datePicker.isHidden = true
         
         activityIndicatorView.hidesWhenStopped = true
     }

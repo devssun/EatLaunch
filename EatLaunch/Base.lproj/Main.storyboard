@@ -42,34 +42,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a8v-Bv-8mw">
-                                <rect key="frame" x="0.0" y="473" width="414" height="263"/>
-                                <subviews>
-                                    <datePicker contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="a6M-RI-OCS">
-                                        <rect key="frame" x="0.0" y="23.666666666666686" width="320" height="215.99999999999994"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="528170597.82719898">
-                                            <!--2017-09-27 02:03:17 +0000-->
-                                        </date>
-                                        <date key="minimumDate" timeIntervalSinceReferenceDate="504961200">
-                                            <!--2017-01-01 11:00:00 +0000-->
-                                        </date>
-                                        <connections>
-                                            <action selector="changeDatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="X6Q-E8-iBr"/>
-                                        </connections>
-                                    </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHb-7f-ga5">
-                                        <rect key="frame" x="384" y="115" width="30" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="조회"/>
-                                        <connections>
-                                            <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ccq-84-tMK"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="sHb-7f-ga5" secondAttribute="trailing" id="yeT-Ag-Xcn"/>
-                                </constraints>
-                            </stackView>
+                            <datePicker contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="a6M-RI-OCS">
+                                <rect key="frame" x="0.0" y="520" width="414" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="528170597.82719898">
+                                    <!--2017-09-27 02:03:17 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="504961200">
+                                    <!--2017-01-01 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="changeDatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="X6Q-E8-iBr"/>
+                                </connections>
+                            </datePicker>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jdu-dd-XNb">
                                 <rect key="frame" x="197" y="305.66666666666669" width="20" height="20"/>
                                 <color key="color" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -78,16 +62,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LSO-tF-huw" secondAttribute="trailing" constant="35" id="0WI-z0-mg7"/>
-                            <constraint firstItem="a8v-Bv-8mw" firstAttribute="top" secondItem="raI-KS-SVw" secondAttribute="bottom" priority="999" constant="42" id="A8L-v0-WTy"/>
                             <constraint firstItem="LSO-tF-huw" firstAttribute="top" secondItem="G8b-BV-gzE" secondAttribute="bottom" constant="50" id="Bie-uA-1Zb"/>
                             <constraint firstItem="raI-KS-SVw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="NxE-QO-eKi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a8v-Bv-8mw" secondAttribute="trailing" id="VZa-7T-3en"/>
+                            <constraint firstItem="a6M-RI-OCS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="P4f-2c-pY2"/>
+                            <constraint firstItem="a6M-RI-OCS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PtK-QS-i9E"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="raI-KS-SVw" secondAttribute="trailing" constant="35" id="apH-Dw-oRW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G8b-BV-gzE" secondAttribute="trailing" constant="35" id="bGn-2n-bJi"/>
-                            <constraint firstItem="a8v-Bv-8mw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bpm-dn-xnr"/>
                             <constraint firstItem="G8b-BV-gzE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="d0U-9l-i4t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a6M-RI-OCS" secondAttribute="bottom" id="gbc-I0-Wtr"/>
                             <constraint firstItem="jdu-dd-XNb" firstAttribute="centerX" secondItem="raI-KS-SVw" secondAttribute="centerX" id="nL7-Z9-hX8"/>
-                            <constraint firstAttribute="bottom" secondItem="a8v-Bv-8mw" secondAttribute="bottom" id="nM1-zX-6Sq"/>
                             <constraint firstItem="LSO-tF-huw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="poC-qt-xQh"/>
                             <constraint firstItem="jdu-dd-XNb" firstAttribute="centerY" secondItem="raI-KS-SVw" secondAttribute="centerY" id="q7T-2Q-heW"/>
                             <constraint firstItem="G8b-BV-gzE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="tce-z5-rFM"/>
@@ -98,10 +81,8 @@
                     <connections>
                         <outlet property="activityIndicatorView" destination="jdu-dd-XNb" id="qcZ-ac-8gW"/>
                         <outlet property="datePicker" destination="a6M-RI-OCS" id="ZcB-RW-KCv"/>
-                        <outlet property="dateStackView" destination="a8v-Bv-8mw" id="9Df-c4-HlE"/>
                         <outlet property="launchTextView" destination="raI-KS-SVw" id="DWs-fS-ll2"/>
                         <outlet property="openDatePickerButton" destination="G8b-BV-gzE" id="fGd-V4-YA9"/>
-                        <outlet property="searchButton" destination="sHb-7f-ga5" id="qBD-1p-M5x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
